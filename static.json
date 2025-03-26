@@ -1,0 +1,5 @@
+{
+    "root": "frontend/build/",
+    "clean_urls": false
+  }
+  
