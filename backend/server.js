@@ -3,6 +3,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import propertyRoutes from './routes/propertyRoutes.js';
+import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';
 import inquiryRoutes from './routes/inquiryRoutes.js';
 
