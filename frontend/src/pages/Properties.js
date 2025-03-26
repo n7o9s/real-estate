@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/properties.css";
 
-const API_URL = "http://localhost:5001/api/properties";
+const API_URL = process.env.REACT_APP_API_URL || "https://key-nest-2e22421016ba.herokuapp.com/api/properties";
 
 const Properties = () => {
     const [properties, setProperties] = useState([]);
