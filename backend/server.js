@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
 import connectDB from "./config/db.js";
 import propertyRoutes from "./routes/propertyRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -14,7 +15,7 @@ const PORT = process.env.PORT || 5001;
 connectDB();
 
 // ✅ CORS Configuration (Allow Dynamic Origins)
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3001", "https://your-heroku-app-name.herokuapp.com"];
 app.use(cors({
     origin: function (origin, callback) {
         if (!origin || allowedOrigins.includes(origin)) {
@@ -34,10 +35,20 @@ app.use("/api/properties", propertyRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/inquiries", inquiryRoutes);
 
-// ✅ Root Route
-app.get("/", (req, res) => {
-    res.json({ message: "✅ Server is running!" });
-});
+// ✅ Serve static files from the React app (Frontend)
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "frontend/build")));
+
+    // If no API routes match, serve the React app's index.html for client-side routing
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+    });
+} else {
+    // For development, just serve a message when the root URL is hit
+    app.get("/", (req, res) => {
+        res.json({ message: "✅ Server is running!" });
+    });
+}
 
 // ✅ Start Server
 app.listen(PORT, () => {
