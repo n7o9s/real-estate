@@ -1,0 +1,45 @@
+.popup-message {
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    z-index: 9999;
+    animation: fadeInOut 4s ease forwards;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.popup-message.success {
+    background-color: #4BB543;
+}
+
+.popup-message.error {
+    background-color: #FF4C4C;
+}
+
+.popup-message.info {
+    background-color: #2196F3;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}

@@ -1,0 +1,117 @@
+.list-property-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.list-property-container h2 {
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #ff7b7b;
+    margin-bottom: 20px;
+}
+
+.property-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.property-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.property-form input,
+.property-form textarea,
+.property-form select {
+    width: 96%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffc4c4;
+    font-size: 1rem;
+    background: #ffebec;
+    transition: border 0.3s ease-in-out;
+    display: block;
+}
+
+.inline-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.inline-fields input {
+    flex: 1;
+}
+
+.property-form input:focus,
+.property-form textarea:focus,
+.property-form select:focus {
+    border-color: #ff7b7b;
+    outline: none;
+    background: #fff;
+}
+
+.property-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.property-form select {
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #ff7b7b, #ffb3b3);
+    color: white;
+    font-size: 1.1rem;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 14px rgba(255, 123, 123, 0.4);
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #ff5c5c, #ffa4a4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(255, 123, 123, 0.5);
+}
+
+.submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+.message {
+    font-size: 1rem;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    color: green;
+    background: #d4edda;
+}
+
+.message.error {
+    color: red;
+    background: #f8d7da;
+}

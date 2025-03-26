@@ -1,0 +1,83 @@
+.property-details {
+    max-width: 800px;
+    margin: 120px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.property-details h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7b7b;
+}
+
+.property-details img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.property-details p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.property-price,
+.property-location {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff7b7b;
+}
+
+.contact-btn {
+    background: #ff7b7b;
+    color: white;
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    background: #ffebec;
+    color: black;
+}
+
+.inquiry-form {
+    margin-top: 20px;
+    text-align: left;
+    padding: 15px;
+    background: #ffebec;
+    border-radius: 8px;
+}
+
+.inquiry-form h3 {
+    color: #ff7b7b;
+}
+
+.inquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.success-text {
+    color: green;
+}
+
+.error-text {
+    color: red;
+}

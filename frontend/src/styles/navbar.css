@@ -1,0 +1,93 @@
+.navbar {
+    background-color: #ffc4c4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.logo-highlight {
+    color: #ff7b7b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: white;
+    transition: background 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 2%;
+    margin-left: 20px;
+}
+
+.welcome-text {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background: #ff7b7b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #ff5555;
+}
+
+.login-btn {
+    background: none;
+    border: 2px solid #ff7b7b;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: white;
+}
+
+.login-btn:hover {
+    background: #ff5555;
+}

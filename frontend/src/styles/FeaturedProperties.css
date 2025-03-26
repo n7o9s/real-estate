@@ -1,0 +1,58 @@
+.featured {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.property-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+}
+
+.property-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.property-info h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+
+.property-info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.view-all-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #ffc4c4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
